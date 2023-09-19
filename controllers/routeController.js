@@ -25,7 +25,7 @@ const bfhlPost = (req, res) => {
     data.forEach(element => {
         const item = parseInt(element);
         if(!isNaN(item)){
-            numbers.push(item);
+            numbers.push(item.toString());
         } else {
             let temp = Math.max(maxChar.toLowerCase().charCodeAt(0),element.toLowerCase().charCodeAt(0))
             temp = String.fromCharCode(temp);
