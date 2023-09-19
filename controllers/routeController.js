@@ -24,11 +24,14 @@ const bfhlPost = (req, res) => {
     }
     data.forEach(element => {
         const item = parseInt(element);
-        if(item){
+        if(!isNaN(item)){
             numbers.push(item);
         } else {
-            maxChar = Math.max(maxChar.toLowerCase().charCodeAt(0),element.toLowerCase().charCodeAt(0))
-            maxChar = String.fromCharCode(maxChar);
+            let temp = Math.max(maxChar.toLowerCase().charCodeAt(0),element.toLowerCase().charCodeAt(0))
+            temp = String.fromCharCode(temp);
+            if( temp === element.toLowerCase()){
+                maxChar = element
+            }
             alphabets.push(element)
         }
 
