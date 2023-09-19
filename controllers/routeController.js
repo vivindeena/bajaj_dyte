@@ -21,7 +21,8 @@ const bfhlPost = (req, res) => {
         if(item){
             numbers.push(item);
         } else {
-            maxChar[0] = Math.max(maxChar.toLowerCase().charCodeAt(0),element.toLowerCase().charCodeAt(0))
+            maxChar = Math.max(maxChar.toLowerCase().charCodeAt(0),element.toLowerCase().charCodeAt(0))
+            maxChar = String.fromCharCode(maxChar);
             alphabets.push(element)
         }
 
@@ -33,7 +34,7 @@ const bfhlPost = (req, res) => {
         "roll_number": "20BCI0005",
         "numbers": numbers,
         "alphabets": alphabets,
-        "highest_alphabet": max
+        "highest_alphabet": maxChar
     });
 
 }
