@@ -21,7 +21,7 @@ const bfhlPost = (req, res) => {
         if(item){
             numbers.push(item);
         } else {
-            const temp = element.toLowerCase()
+            const temp = element.toLowerCase();
             max[0] = Math.max(max[0].toLowerCase().charCodeAt(0),temp.charCodeAt(0))
             alphabets.push(element)
         }
