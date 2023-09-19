@@ -7,15 +7,21 @@ const bfhlGet = (req, res) => {
 }
 
 const bfhlPost = (req, res) => {
-    const {data} = req.body;
-    if(!data){
-        return res.status(400).json({
-            errorMessage: "Missing Params",
-        });
-    }
     let maxChar="a";
     let numbers = [];
     let alphabets = [];
+    const {data} = req.body;
+    if(!data){
+        return res.status(400).json({
+            is_success: false,
+            user_id: "vivin_d_08082002",
+            email: "vivin.d2020@vitstudent.ac.in",
+            roll_number: "20BCI0005",
+            numbers: numbers,
+            alphabets: alphabets,
+            highest_alphabet: [maxChar],
+        });
+    }
     data.forEach(element => {
         const item = parseInt(element);
         if(item){
@@ -28,7 +34,7 @@ const bfhlPost = (req, res) => {
 
     });
     return res.status(200).json({
-        "is_success": false,
+        "is_success": true,
         "user_id": "vivin_d_08082002",
         "email": "vivin.d2020@vitstudent.ac.in",
         "roll_number": "20BCI0005",
