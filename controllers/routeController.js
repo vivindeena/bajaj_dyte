@@ -33,6 +33,27 @@ const bfhlPost = (req, res) => {
         }
 
     });
+    if (alphabets.length === 0){
+        return res.status(200).json({
+            is_success: true,
+            user_id: "vivin_d_08082002",
+            email: "vivin.d2020@vitstudent.ac.in",
+            roll_number: "20BCI0005",
+            numbers: numbers,
+            alphabets: alphabets,
+            highest_alphabet: [],
+        });
+    } else {
+        return res.status(200).json({
+            is_success: true,
+            user_id: "vivin_d_08082002",
+            email: "vivin.d2020@vitstudent.ac.in",
+            roll_number: "20BCI0005",
+            numbers: numbers,
+            alphabets: alphabets,
+            highest_alphabet: [maxChar],
+        });
+    }
     return res.status(200).json({
         "is_success": true,
         "user_id": "vivin_d_08082002",
