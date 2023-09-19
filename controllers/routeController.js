@@ -13,7 +13,7 @@ const bfhlPost = (req, res) => {
             errorMessage: "Missing Params",
         });
     }
-    let max=["0"];
+    let maxChar=["0"];
     let numbers = [];
     let alphabets = [];
     data.forEach(element => {
@@ -22,7 +22,8 @@ const bfhlPost = (req, res) => {
             numbers.push(item);
         } else {
             const temp = element.toLowerCase();
-            max[0] = Math.max(max[0].toLowerCase().charCodeAt(0),temp.charCodeAt(0))
+            const temp2 = maxChar[0].toLowerCase();
+            maxChar[0] = Math.max(temp2.charCodeAt(0),temp.charCodeAt(0))
             alphabets.push(element)
         }
 
