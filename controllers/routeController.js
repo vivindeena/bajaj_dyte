@@ -19,7 +19,7 @@ const bfhlPost = (req, res) => {
             roll_number: "20BCI0005",
             numbers: numbers,
             alphabets: alphabets,
-            highest_alphabet: [maxChar],
+            highest_alphabet: [],
         });
     }
     data.forEach(element => {
