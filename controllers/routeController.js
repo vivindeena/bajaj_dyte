@@ -13,7 +13,7 @@ const bfhlPost = (req, res) => {
             errorMessage: "Missing Params",
         });
     }
-    let maxChar=["0"];
+    let maxChar=["a"];
     let numbers = [];
     let alphabets = [];
     data.forEach(element => {
